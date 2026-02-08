@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Заявка на ремонт техники</title>
+  <style>
+    form { width:300px; margin:20px auto; padding:10px; border:1px solid #ccc; border-radius:6px; }
+    input, select, button { width:100%; padding:6px; margin:6px 0; box-sizing:border-box; }
+    .inline { display:flex; gap:8px; align-items:center; }
+  </style>
+</head>
+<body>
+  <form id="myForm" method="post" novalidate>
+    <input type="text" name="name" placeholder="Имя" required />
+    <input type="text" name="model" placeholder="Модель (марка/модель)" required />
+
+    <select name="service">
+      <option value="diagnostics">Диагностика</option>
+      <option value="screen">Замена экрана</option>
+      <option value="battery">Замена батареи</option>
+      <option value="board">Ремонт платы</option>
+    </select>
+
+    <label class="inline">
+      <input type="checkbox" name="warranty" />
+      <span>Гарантия есть</span>
+    </label>
+
+    <div>
+      <label><input type="radio" name="term" value="1-3" checked /> 1—3 дня</label><br/>
+      <label><input type="radio" name="term" value="3-7" /> 3—7 дней</label>
+    </div>
+
+    <button type="submit">Отправить</button>
+  </form>
+
+  <script>
+    document.getElementById('myForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const name = this.name.value.trim();
+      const model = this.model.value.trim();
+      const service = this.service.value;
+      const warranty = this.warranty.checked ? 'Да' : 'Нет';
+      const term = (this.term && this.term.value) ? this.term.value : '';
+
+      if (!name || !model) {
+        alert('Пожалуйста, заполните имя и модель.');
+        return;
+      }
+
+      alert(
+        'Заявка\\n' +
+        'Имя: ' + name + '\\n' +
+        'Модель: ' + model + '\\n' +
+        'Услуга: ' + service + '\\n' +
+        'Гарантия: ' + warranty + '\\n' +
+        'Срок: ' + term
+      );
+
+    });
+  </script>
+</body>
+</html>
