@@ -43,4 +43,4 @@ http://localhost:8080/phpinfo.php
 
 ```www/phpinfo.php``` — файл с phpinfo() для проверки
 
-```nginx/default.conf`` — файл для обработки PHP
+```nginx/default.conf``` — файл для обработки PHP
