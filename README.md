@@ -8,7 +8,7 @@
 
 ## 📌 Описание задания
 Настройка Nginx + PHP-FPM. Основы HTML-форм и обработка на JavaScript.
-👉 http://localhost:3000
+👉 http://localhost:8080
 
 ---
 
@@ -16,7 +16,7 @@
 
 ### 1. Клонировать репозиторий
 ```bash
-git clone https://github.com/TimonMax/nginx_lab_2.git
+git clone git@github.com:TimonMax/nginx_lab_2.git
 cd nginx-lab
 ```
 ### 2. Запустить контейнеры Docker
