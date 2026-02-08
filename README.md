@@ -1,4 +1,4 @@
-# Nginx в Docker
+# Лабораторная работа №2:  Nginx + PHP-FPM
 
 ## 👩‍💻 Автор
 **ФИО:** Фаткин Артем Александрович  
@@ -7,8 +7,11 @@
 ---
 
 ## 📌 Описание задания
-Настройка Nginx + PHP-FPM. Основы HTML-форм и обработка на JavaScript.
-👉 http://localhost:8080
+1. Настроить Nginx для работы с PHP через PHP-FPM.
+2. Показать работу PHP на примере phpinfo().
+3. Повторить основы HTML: формы и разные типы полей.
+4. Обработать форму на JavaScript без перезагрузки страницы.
+http://localhost:8080
 
 ---
 
@@ -16,8 +19,8 @@
 
 ### 1. Клонировать репозиторий
 ```bash
-git clone git@github.com:TimonMax/nginx_lab_2.git
-cd nginx-lab
+git clone https://github.com/TimonMax/nginx_lab_2.git
+cd nginx-lab-2
 ```
 ### 2. Запустить контейнеры Docker
 ```bash
@@ -27,10 +30,17 @@ docker-compose up -d --build
 ```bash
 http://localhost:8080
 ```
-
+### 4. Проверка работы PHP
+```bash
+http://localhost:8080/phpinfo.php
+```
 ## Содержимое проекта
-docker-compose.yml — описание сервиса Nginx
+```docker-compose.yml``` — описание сервиса Nginx
 
-code/index.html — главная HTML-страница
+```www/form.html``` — главная HTML-страница с формой
 
-code/about.html — дополнительная HTML-страница
+```www/index.php``` — подключает form.html
+
+```www/phpinfo.php``` — файл с phpinfo() для проверки
+
+```nginx/default.conf`` — файл для обработки PHP

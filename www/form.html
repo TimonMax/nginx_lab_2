@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>Заявка на ремонт техники</title>
   <style>
-    form { width:300px; margin:20px auto; padding:10px; border:1px solid #ccc; border-radius:6px; }
+    form { width:300px; margin:30px auto; padding:20px; border:1px solid #ccc; border-radius:6px; }
     input, select, button { width:100%; padding:6px; margin:6px 0; box-sizing:border-box; }
     .inline { display:flex; gap:8px; align-items:center; }
   </style>
@@ -22,8 +22,8 @@
     </select>
 
     <label class="inline">
-      <input type="checkbox" name="warranty" />
       <span>Гарантия есть</span>
+      <input type="checkbox" name="warranty" />
     </label>
 
     <div>
@@ -49,11 +49,11 @@
       }
 
       alert(
-        'Заявка\\n' +
-        'Имя: ' + name + '\\n' +
-        'Модель: ' + model + '\\n' +
-        'Услуга: ' + service + '\\n' +
-        'Гарантия: ' + warranty + '\\n' +
+        'Заявка\n' +
+        'Имя: ' + name + '\n' +
+        'Модель: ' + model + '\n' +
+        'Услуга: ' + service + '\n' +
+        'Гарантия: ' + warranty + '\n' +
         'Срок: ' + term
       );
 
